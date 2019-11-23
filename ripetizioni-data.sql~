@@ -1,0 +1,40 @@
+USE tutoring;
+
+INSERT INTO user (privilege, username, password)
+VALUES ('admin','guglielmo','beccuti');
+INSERT INTO user (privilege, username, password)
+VALUES ('client','landolfo','rufolo');
+INSERT INTO user (privilege, username, password)
+VALUES ('client','marco','valdo');
+
+INSERT INTO teacher (name, surname)
+VALUES ('mario','rossi');
+INSERT INTO teacher (name, surname)
+VALUES ('roberto','scarto');
+INSERT INTO teacher (name, surname)
+VALUES ('gianluca','retto');
+INSERT INTO teacher (name, surname)
+VALUES ('milena','gatrio');
+INSERT INTO teacher (name, surname)
+VALUES ('giorgia','panice');
+INSERT INTO teacher (name, surname)
+VALUES ('lucia','artesa');
+INSERT INTO teacher (name, surname)
+VALUES ('franco','filet');
+INSERT INTO teacher (name, surname)
+VALUES ('beatrice','guarda');
+INSERT INTO teacher (name, surname)
+VALUES ('dario','impara');
+INSERT INTO teacher (name, surname)
+VALUES ('serena','dente');
+
+INSERT INTO subject (name)
+VALUES ('matematica');
+INSERT INTO subject (name)
+VALUES ('chimica');
+INSERT INTO subject (name)
+VALUES ('informatica');
+INSERT INTO subject (name)
+VALUES ('fisica');
+INSERT INTO subject (name)
+VALUES ('inglese');
