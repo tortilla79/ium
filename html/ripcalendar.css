@@ -1,0 +1,36 @@
+body {
+    font-family:fantasy;
+    background-color:#113599;
+    margin: 2em;
+}
+#main {
+    background-color:#999999
+}
+ul {
+    list-style-type:none;
+    background:#559989;
+}
+li {
+    display:inline-block;
+}
+a {
+    font-size:2em;
+    color:black;
+}
+li a:hover {
+    color: white;
+    background:grey;
+}
+
+table {
+    table-layout:fixed;
+    background-color: white;
+    border-collapse: collapse;
+    border: 1em solid #559989;
+    width: 100%;
+}
+
+input[name="queryradio"] {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
