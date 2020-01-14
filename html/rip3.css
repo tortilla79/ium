@@ -1,0 +1,38 @@
+nav {
+    display: flex;
+    background: white;
+    margin: 5vh 5vw 5vh 5vw;
+}
+
+nav > * {
+    flex: 1;
+}
+
+a {
+    background: rgba(13, 150, 90, 0.5);
+    border: 2px solid rgb(110, 100, 10);
+    border-top-right-radius: 10% 20%;
+    border-bottom-left-radius: 10% 20%;
+    color:  rgb(110, 100, 10);
+    font-size: 5vh;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 5px 5px 4px white;
+    text-align: center;
+                  
+}
+
+a:hover {
+    background: white;
+}
+
+.logo {
+    margin: 5vh 5vw 5vh 5vw;
+    width: 90vw;
+    height: 10vh;
+    border: 5px solid black;
+}
+
+img {
+    max-height: 100%;
+}
