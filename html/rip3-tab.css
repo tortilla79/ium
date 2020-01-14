@@ -1,0 +1,28 @@
+table {
+  table-layout=fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 5px solid brown;
+}
+
+thead th {
+ width: 14%;
+ font-family: 'Schoolbell', cursive;
+}
+
+th, td {
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(odd){
+  background: rgba(1,75,150);
+}
+
+tr:nth-child(even){
+  background: rgba(150,75,1);  
+}
