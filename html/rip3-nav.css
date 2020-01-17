@@ -1,0 +1,31 @@
+nav {
+    display: flex;
+    margin: 5vh 5vw 5vh 5vw;
+}
+
+nav > * {
+    flex: 1;
+}
+
+a[href="home.html"] {
+    flex: 3 1 auto;
+}
+
+a {
+    //background: rgba(13, 150, 90, 1);
+    border: 5px solid black;
+    border-top-right-radius: 10% 20%;
+    border-bottom-left-radius: 10% 20%;
+    color:  black;
+    font-size: 5vh;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 5px 5px 4px white;
+    text-align: center;
+    
+}
+
+a:hover {
+    background: rgba(1,120,1,0.5);
+}
+

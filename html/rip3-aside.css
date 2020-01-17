@@ -1,0 +1,28 @@
+aside {
+    border: 5px double black;
+    display: flex;
+    width: 15vw;
+    overflow: auto;
+}
+
+aside > div {
+
+    flex: 5 1 auto;
+}
+
+input {
+    display: block;
+}
+#radiob input{
+    margin-top: 40px;
+}
+#search {
+    width: 10vw;
+}
+#search input {
+    font-size: inherit;
+    width: 10vw;
+}
+input[type='submit']{
+    font-family: inherit;
+}

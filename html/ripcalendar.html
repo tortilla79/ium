@@ -3,52 +3,61 @@
   <head>
     <title>RipetizioniIUM</title>
     <link rel="stylesheet" href="rip3.css"/>
-		<link rel=°stylesheet° type=°text/css° href="http://fonts.googleapis.com/css?family=Schoolbell">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Schoolbell">
   </head>
   <body>
-    <div class="logo">
+    <header>
       <!-- logo non esiste ancora-->
-      <img id="logo" alt="Studia&Studia" src="./img/logo.jpg"/>
-    </div>
+      <!--<img id="logo" alt="Studia&Studia" src="./img/logo.jpg"/>-->
+      <h1>SblockNotes</h1>
+    </header>
     <nav>
-     <a href="home.html">Home</a>
-     <a href="contacts.html">Contatti</a>
-     <a href="login.html">Accedi</a>
+      <a href="home.html">Home</a>
+      <a href="contacts.html">Contatti</a>
+      <a href="login.html">Accedi</a>
     </nav>
-    <main>
-      <table>
-	<caption>Orario Ripetizioni</caption>
-	<thead>
-		<tr>
-			<th scope="col">Ora</th>
-			<th scope="col">Lun</th>
-			<th scope="col">Mar</th>
-			<th scope="col">Mer</th>
-			<th scope="col">Gio</th>
-			<th scope="col">Ven</th>
-		</tr>
-	  
-	</thead>
-	<tbody>
-	 
-	  <tr><th scope="row">15-16</th><td></td><td></td><td></td><td></td><td></td></tr>
-	  <tr><th scope="row">16-17</th><td></td><td></td><td></td><td></td><td></td></tr>
-	  <tr><th scope="row">17-18</th><td></td><td></td><td></td><td></td><td></td></tr>
-	  <tr><th scope="row">18-19</th><td></td><td></td><td></td><td></td><td></td></tr>
-	  
-	</tbody>
-	<tfooter>
-	  <th>Legenda:</th><td></td>
-	</tfooter>
-      </table>
-    </main>
-    <aside>
-      <label for="teacher">Insegnante: </label>
-      <input id="teacher"/>
-      <label for="subject">Materia: </label>
-      <input id="subject"/>
-      <input type="submit" value="Filter"/>
-    </aside>
+    <section>
+      <main>
+	<table>
+	  <caption>Orario Ripetizioni</caption>
+	  <thead>
+	    <tr>
+	      <th scope="col">Ora</th>
+	      <th scope="col">Lun</th>
+	      <th scope="col">Mar</th>
+	      <th scope="col">Mer</th>
+	      <th scope="col">Gio</th>
+	      <th scope="col">Ven</th>
+	    </tr>
+	    
+	  </thead>
+	  <tbody>
+	    
+	    <tr><th scope="row">15-16</th><td></td><td></td><td></td><td></td><td></td></tr>
+	    <tr><th scope="row">16-17</th><td></td><td></td><td></td><td></td><td></td></tr>
+	    <tr><th scope="row">17-18</th><td></td><td></td><td></td><td></td><td></td></tr>
+	    <tr><th scope="row">18-19</th><td></td><td></td><td></td><td></td><td></td></tr>
+	    
+	  </tbody>
+	  <tfooter>
+	    <th>Legenda:</th><td></td>
+	  </tfooter>
+	</table>
+      </main>
+      <aside>
+	<div id="radiob">
+	  <input type="radio" name="subject" checked>
+	  <input type="radio" name="teacher">
+	</div>
+	<div id="search">
+	  <label for="subject">Materia: </label>
+	  <input id="subject"/>
+	  <label for="teacher">Insegnante: </label>
+	  <input id="teacher"/><br>
+	  <input type="submit" value="Cerca"/>
+	</div>
+      </aside>
+    </section>
     <footer>
       <p>Se non studi peschi granchi</p>  
     </footer>
