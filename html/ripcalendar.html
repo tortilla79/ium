@@ -12,9 +12,22 @@
       SblockNotes
     </header>
     <nav>
-      <a href="home.html">Home</a>
-      <a href="contacts.html">Contatti</a>
-      <a href="login.html">Accedi</a>
+<div>
+      <a href="home.html" class="menu">Home</a>
+</div>
+<div> <a href="contacts.html" class="menu">Contatti</a>
+</div>
+<div class="dropdown">
+	<a href="login.html" class="dropdown menu">Accedi</a>
+      <div class="dropdown-content">
+	<label for="user">User</label>
+	<input id="user" placeholder="gino il formaggino">
+	<label for="password">Password</label>
+	<input id="password" type="password">
+	<input type="submit" value="Log-in">
+	<a href="registration.html">Registrati Ora</a>
+      </div>
+      </div>
     </nav>
     <section>
       <main>
