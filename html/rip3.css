@@ -31,14 +31,32 @@ h1 {
     font-size: 100px;
 
 }
-section {
+section .homepage{
     display: flex;
     justify-content: center;
     font-size: 25px;
 }
+.register {
+    padding-left: 30vw;
+    background: lightblue;
+}
 
+.register > * {
+    margin: 10px;
+}
+
+form > * {
+    display: inline-block;
+    min-width: 19vw;
+    font-size: 20px;
+}
 footer {
-    height: 200vh;
-    position: sticky;
-    top: 50vh;
+    position: fixed;
+    bottom: 0px;
+    right:0px;
+    left:0px;
+    background: black;
+    color: white;
+    text-align: center;
+    
 }
