@@ -57,17 +57,18 @@
 	  </tfooter>
 	</table>
       </main>
-      <aside>
+      <aside ng-app="ripcalendar-filter" ng-controller="filter-ctrl">
 	<div id="radiob">
 	  <input type="radio" name="subject" checked>
 	  <input type="radio" name="teacher">
 	</div>
 	<div id="search">
 	  <label for="subject">Materia: </label>
-	  <input id="subject"/>
+	  <input id="subject" ng-model="subject"/>
 	  <label for="teacher">Insegnante: </label>
-	  <input id="teacher"/><br>
-	  <input type="submit" value="Cerca"/>
+	  <input id="teacher" ng-model="teacher"/><br>
+	  <input type="submit" value="Cerca" onclick="script/registration.js"/>
+	  <p ng-model="search-error"></p>
 	</div>
       </aside>
     </section>
