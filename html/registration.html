@@ -4,6 +4,7 @@
     <title>RipetizioniIUM - Registrazione</title>
     <link rel="stylesheet" href="rip3.css"/>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Schoolbell">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   </head>
   <body>
     <header>
@@ -12,38 +13,66 @@
       SblockNotes
     </header>
     <nav>
-<div>
-      <a href="ripcalendar.html" class="menu">Home</a>
-</div>
-<div> <a href="contacts.html" class="menu">Contatti</a>
-</div>
-<div class="dropdown">
-	<a href="login.html" class="dropdown menu">Accedi</a>
-      <div class="dropdown-content">
-	<label for="user">User</label>
-	<input id="user" placeholder="gino il formaggino">
-	<label for="password">Password</label>
-	<input id="password" type="password">
-	<input type="submit" value="Log-in">
-	<a href="registration.html">Registrati Ora</a>
+      <div>
+	<a href="ripcalendar.html" class="menu">Home</a>
       </div>
+      <div> <a href="contacts.html" class="menu">Contatti</a>
+      </div>
+      <div class="dropdown">
+	<a href="login.html" class="dropdown menu">Accedi</a>
+	<div class="dropdown-content">
+	  <label for="user">User</label>
+	  <input id="user" placeholder="gino il formaggino">
+	  <label for="password">Password</label>
+	  <input id="password" type="password">
+	  <input type="submit" value="Log-in">
+	  <a href="registration.html">Registrati Ora</a>
+	</div>
       </div>
     </nav>
-    <section class="register">
+    <section class="register" ng-app="registration" ng-controller="regCtrl">
       <form>
-      <label for="username">Username : </label><input id="username"><br>
-      <label for="email">E-mail : </label><input id="email"><br>
-      <label for="password">Password : </label><input id="password" type="password"><br>
-      <label for="passwordrip" type="password">Ripeti Password :</label><input id="passwordrip"><br>
-      <input type="submit" value="Registrati">
-      <!--
-      <label for=""></label>
-      <input>
-      -->
+	<label for="username">Username : </label><input id="username" ng-model="username"><br>
+	<label for="email">E-mail : </label><input id="email" ng-model="email"><br>
+	<label for="password">Password : </label><input id="password" ng-model="password" type="password"><br>
+	<label for="passwordrip" type="password">Ripeti Password :</label><input id="passwordrip" ng-model="passwordrip"><br>
+	<input type="submit" value="Registrati" ng-click="script/registration.js">
+	<!--
+	    <label for=""></label>
+	    <input>
+	    -->
       </form>
     </section>
     <footer>
       <p>Se non studi peschi granchi</p>  
     </footer>
+    <script>
+      angular.module('myApp', [])
+    .controller('myCtrl', function ($scope, $http) {
+        //$http.get("welcome.html").then(function (response) {
+	data = {
+	    uname: $scope.username,
+	    email: $scope.email,
+	    password: $scope.password,
+	    passwordrip: $scope.passwordrip
+	};
+        $scope.sendData = function() {
+	    $http.post("Registration", data)
+		.then(function (response) {
+		    let msg = response.data;
+		    if (msg === "ok") {
+
+		    } else if (msg === "uname") {
+			
+		    } else if (msg === "psw") {
+			
+		    } else //server error
+		});
+	    
+	};
+	
+    });
+    </script>
+
   </body>
 </html>
