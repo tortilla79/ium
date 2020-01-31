@@ -1,0 +1,78 @@
+@import 'rip3-tab.css';
+@import 'rip3-nav.css';
+@import 'rip3-aside.css';
+
+body {
+    background: white;
+    font-family: 'Schoolbell', cursive;
+}
+.logo {
+    //margin: 5vh 5vw 5vh 5vw;
+    width: //90vw;
+    height: 10vh;
+    border: 5px solid black;
+    background: black;
+    color: white;
+}
+
+header {
+    display:block;
+    height: 10vh;
+    background: black;
+    color:white;
+    text-align: center;
+    font-size: 50px;
+    position: fixed;
+    top: 0px;
+    right:0px;
+    left:0px;
+}
+h1 {
+    font-size: 100px;
+
+}
+section .homepage{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+.register {
+    padding-left: 30vw;
+    background: lightblue;
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+
+.register > * {
+    margin: 10px;
+}
+
+.register > p {
+    color: red;
+    padding-left: 20vw;
+}
+
+input[value="Registrati"] {
+    margin-left: 5vw;
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+input[value="Registrati"]:hover{
+    background: blue;
+    color: white;
+}
+form > * {
+    display: inline-block;
+    min-width: 19vw;
+    font-size: 20px;
+}
+footer {
+    position: fixed;
+    bottom: 0px;
+    right:0px;
+    left:0px;
+    background: black;
+    color: white;
+    text-align: center;
+    
+}
