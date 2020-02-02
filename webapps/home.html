@@ -1,0 +1,79 @@
+<!DOCTYPE>
+<html lang="it">
+  <head>
+    <title>RipetizioniIUM</title>
+    <link rel="stylesheet" href="css/rip3.css"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Schoolbell">
+  </head>
+  <body>
+    <header>
+      <!-- logo non esiste ancora-->
+      <!--<img id="logo" alt="Studia&Studia" src="./img/logo.jpg"/>-->
+      SblockNotes
+    </header>
+    <nav>
+<div>
+      <a href="home.html" class="menu">Home</a>
+</div>
+<div> <a href="contacts.html" class="menu">Contatti</a>
+</div>
+<div class="dropdown">
+	<a href="login.html" class="dropdown menu">Accedi</a>
+      <div class="dropdown-content">
+	<label for="user">User</label>
+	<input id="user" placeholder="gino il formaggino">
+	<label for="password">Password</label>
+	<input id="password" type="password">
+	<input type="submit" value="Log-in">
+	<a href="registration.html">Registrati Ora</a>
+      </div>
+      </div>
+    </nav>
+    <section>
+      <main>
+	<table>
+	  <caption>Orario Ripetizioni</caption>
+	  <thead>
+	    <tr>
+	      <th scope="col">Ora</th>
+	      <th scope="col">Lun</th>
+	      <th scope="col">Mar</th>
+	      <th scope="col">Mer</th>
+	      <th scope="col">Gio</th>
+	      <th scope="col">Ven</th>
+	    </tr>
+	    
+	  </thead>
+	  <tbody>
+	    
+	    <tr><th scope="row">15-16</th><td></td><td></td><td></td><td></td><td></td></tr>
+	    <tr><th scope="row">16-17</th><td></td><td></td><td></td><td></td><td></td></tr>
+	    <tr><th scope="row">17-18</th><td></td><td></td><td></td><td></td><td></td></tr>
+	    <tr><th scope="row">18-19</th><td></td><td></td><td></td><td></td><td></td></tr>
+	    
+	  </tbody>
+	  <tfooter>
+	    <th>Legenda:</th><td></td>
+	  </tfooter>
+	</table>
+      </main>
+      <aside ng-app="ripcalendar-filter" ng-controller="filter-ctrl">
+	<div id="radiob">
+	  <input type="radio" name="subject" checked>
+	  <input type="radio" name="teacher">
+	</div>
+	<div id="search">
+	  <label for="subject">Materia: </label>
+	  <input id="subject" ng-model="subject"/>
+	  <label for="teacher">Insegnante: </label>
+	  <input id="teacher" ng-model="teacher"/><br>
+	  <input type="submit" value="Cerca" ng-click="script/registration.js"/>
+	  <p ng-model="search-error"></p>
+	</div>
+      </aside>
+    </section>
+    <footer>
+      Se non studi peschi granchi  
+    </footer>
+  </body>
+</html>
