@@ -18,21 +18,15 @@ angular.module('registration', [])
 		    case "uname":
 			$scope.requestans = "username gia in uso";
 			break;
-		    case "pswrip":
-			$scope.requestans = "conferma password errata";
-			break;
 		    case "psw":
-			$scope.requestans = "password troppo corta - minimo 8 caratteri";
+			$scope.requestans = "conferma password errata";
 			break;
 		    default:
 			$scope.requestans = msg;
 		    }
-		    if ($scope.requestans === "success")
-			document.location.href = 'home.html';
-		    else if ($scope.requestans === "username gia in uso")
+		    if ($scope.requestans === "username gia in uso")
 			document.getElementById("username").focus();
-		    else if($scope.requestans === "conferma password errata" ||
-			   $scope.requestans === "password troppo corta - minimo 8 caratteri") {
+		    else if($scope.requestans === "conferma password errata") {
 			$scope.password = "";
 			$scope.passwordrip = "";
 			document.getElementById("password").focus();

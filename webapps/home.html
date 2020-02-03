@@ -4,6 +4,9 @@
     <title>RipetizioniIUM</title>
     <link rel="stylesheet" href="css/rip3.css"/>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Schoolbell">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="script/login.js"></script>
+    <script src="script/calendar.js" async></script>
   </head>
   <body>
     <header>
@@ -13,24 +16,27 @@
     </header>
     <nav>
 <div>
-      <a href="home.html" class="menu">Home</a>
+  <a href="home.html" class="menu">Home</a>
 </div>
-<div> <a href="contacts.html" class="menu">Contatti</a>
+<div>
+  <a href="contacts.html" class="menu">Contatti</a>
 </div>
 <div class="dropdown">
 	<a href="login.html" class="dropdown menu">Accedi</a>
-      <div class="dropdown-content">
+	<div class="dropdown-content"
+	     ng-app="login" ng-controller="loginCtrl">
 	<label for="user">User</label>
-	<input id="user" placeholder="gino il formaggino">
+	<input ng-model="username" id="user" placeholder="gino il formaggino">
 	<label for="password">Password</label>
-	<input id="password" type="password">
-	<input type="submit" value="Log-in">
+	<input ng-model="password" id="password" type="password">
+	<input type="submit" value="Log-in" ng-click="sendData()">
+	<p ng-bind="requestans"></p>
 	<a href="registration.html">Registrati Ora</a>
       </div>
       </div>
     </nav>
     <section>
-      <main>
+      <main ng-app="calendar" ng-controller="calendarCtrl">
 	<table>
 	  <caption>Orario Ripetizioni</caption>
 	  <thead>
