@@ -6,37 +6,43 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Schoolbell">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="script/login.js"></script>
-    <script src="script/calendar.js" async></script>
+    <script src="script/calendar.js"></script>
   </head>
   <body>
     <header>
-      <!-- logo non esiste ancora-->
-      <!--<img id="logo" alt="Studia&Studia" src="./img/logo.jpg"/>-->
       SblockNotes
     </header>
     <nav>
-<div>
-  <a href="home.html" class="menu">Home</a>
-</div>
-<div>
-  <a href="contacts.html" class="menu">Contatti</a>
-</div>
-<div class="dropdown">
+      <div>
+	<a href="home.html" class="menu">Home</a>
+      </div>
+      <div>
+	<a href="contacts.html" class="menu">Contatti</a>
+      </div>
+      <div class="dropdown">
 	<a href="login.html" class="dropdown menu">Accedi</a>
 	<div class="dropdown-content"
 	     ng-app="login" ng-controller="loginCtrl">
-	<label for="user">User</label>
-	<input ng-model="username" id="user" placeholder="gino il formaggino">
-	<label for="password">Password</label>
-	<input ng-model="password" id="password" type="password">
-	<input type="submit" value="Log-in" ng-click="sendData()">
-	<p ng-bind="requestans"></p>
-	<a href="registration.html">Registrati Ora</a>
-      </div>
+	  <label for="user">User</label><br>
+	  <input ng-model="username" id="user" placeholder="gino il formaggino"><br>
+	  <label for="password">Password</label><br>
+	  <input ng-model="password" id="password" type="password"><br>
+	  <input type="submit" value="Log-in" ng-click="sendData()">
+	  <p ng-bind="requestans"></p>
+	  <a href="registration.html">Registrati</a>
+	</div>
       </div>
     </nav>
     <section>
-      <main ng-app="calendar" ng-controller="calendarCtrl">
+      <div class="search">
+	<label for="subject">Materia: </label>
+	<input id="subject" ng-model="subject"/>
+	<label for="teacher">Insegnante: </label>
+	<input id="teacher" ng-model="teacher"/>
+	<input type="submit" value="Cerca" id="buttonFilter"/>
+	<p ng-model="search-error"></p>
+      </div>
+      <main>
 	<table>
 	  <caption>Orario Ripetizioni</caption>
 	  <thead>
@@ -59,24 +65,24 @@
 	    
 	  </tbody>
 	  <tfooter>
-	    <th>Legenda:</th><td></td>
+	    <th>Legenda:</th>
 	  </tfooter>
 	</table>
       </main>
-      <aside ng-app="ripcalendar-filter" ng-controller="filter-ctrl">
-	<div id="radiob">
-	  <input type="radio" name="subject" checked>
-	  <input type="radio" name="teacher">
-	</div>
-	<div id="search">
-	  <label for="subject">Materia: </label>
-	  <input id="subject" ng-model="subject"/>
-	  <label for="teacher">Insegnante: </label>
-	  <input id="teacher" ng-model="teacher"/><br>
-	  <input type="submit" value="Cerca" ng-click="script/registration.js"/>
-	  <p ng-model="search-error"></p>
-	</div>
-      </aside>
+      <!--  <aside ng-app="ripcalendar-filter" ng-controller="filter-ctrl">
+	    <div id="radiob">
+	      <input type="radio" name="subject" checked>
+	      <input type="radio" name="teacher">
+	    </div>
+	    <div id="search">
+	      <label for="subject">Materia: </label>
+	      <input id="subject" ng-model="subject"/>
+	      <label for="teacher">Insegnante: </label>
+	      <input id="teacher" ng-model="teacher"/><br>
+	      <input type="submit" value="Cerca" id="buttonFilter"/>
+	      <p ng-model="search-error"></p>
+	    </div>
+      </aside>-->
     </section>
     <footer>
       Se non studi peschi granchi  

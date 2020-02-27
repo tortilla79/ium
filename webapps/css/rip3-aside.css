@@ -1,18 +1,20 @@
-aside {
-    border: 5px double black;
-    display: flex;
-    width: 15vw;
+.search {
+    border: 5px solid black;
+    width: auto;
     overflow: auto;
+    text-align: center;
+}
+
+.search > * {
+    margin: auto;
+
+
 }
 
 aside > div {
-
     flex: 5 1 auto;
 }
 
-input {
-    display: block;
-}
 #radiob input{
     margin-top: 40px;
 }

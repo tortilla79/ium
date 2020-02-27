@@ -43,7 +43,8 @@ a:hover {
     right: 5 vw;
     background: white;
     border: 2px solid black;
-    border-radius: 10px;
+    border-top-right-radius: 10% 20%;
+    border-bottom-left-radius: 10% 20%;
     margin-top: 1vh;     
     min-width: 20vw;
     z-index: 1;
@@ -58,7 +59,11 @@ a:hover {
     padding-left: 1vw;
 }	  
 
-.dropdown:hover .dropdown-content{
+.dropdown:hover .dropdown-content {
     display: block;
+}
+
+.dropdown-content > a {
+    margin: 2vw;
 }
 

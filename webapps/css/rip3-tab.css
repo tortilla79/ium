@@ -1,8 +1,8 @@
 main {
-    width: 80vw;
-    float: left;
+    width: auto;
     overflow: auto;
     border: 2.5px solid black;
+    margin-bottom: 5vh;
 }
 
 table {
@@ -25,6 +25,11 @@ th, td {
 
 td {
     text-align: center;
+}
+
+td > * {
+    width: 120px;
+    max-width: 100%;
 }
 
 tbody tr:nth-child(odd){
