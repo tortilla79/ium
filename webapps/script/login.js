@@ -25,7 +25,7 @@ angular.module('login', [])
 			$scope.password = "";
 			document.getElementById("username").focus();
 		    } else if($scope.requestans === "success") {
-			document.location.href = 'userpage.html';
+			document.location.href = 'user.html';
 		    } else {
 			$scope.username = "";
 			$scope.password = "";

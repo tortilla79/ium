@@ -1,6 +1,7 @@
 @import 'rip3-tab.css';
 @import 'rip3-nav.css';
 @import 'rip3-aside.css';
+@import 'rip3-user.css';
 
 body {
     background: white;
@@ -58,7 +59,7 @@ form > * {
 }
 
 footer {
-    position: relative; //fixed;
+    position: fixed;
     bottom: 0px;
     right: 0px;
     left: 0px;

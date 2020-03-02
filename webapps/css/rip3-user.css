@@ -1,0 +1,52 @@
+#ripetizioni button {
+    border: 2px solid black;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 20%;
+    font-family: inherit;
+}
+
+#ripetizioni section {
+    border: 2px solid black;
+    margin-top: 0px;
+    width: auto;
+}
+
+#ripetizioni h1 {
+    text-align: center;
+    font-size: 10vh;
+    margin: 0 1vh 0 1vh;
+}
+
+#ripetizioni h2 {
+    margin-top: 0px;
+    border: 2px solid black; 
+}
+#ripetizioni ul {
+    list-style-type: none;
+}
+#ripetizioni span {
+    margin-right: 5vw;
+    margin-left: 2vw;
+}
+
+/*modifiche al nav*/
+
+.logged {
+    display: flex;
+    font-size: 2vw;
+    padding-left: 1vw;
+    max-width: 100%;
+    margin-bottom: 1vh;
+}
+
+.logged:hover {
+    color: orange;
+    text-decoration: underline;
+    background: white;
+}
+
+fieldset {
+    border: 1px none grey;
+    border-bottom: 1px solid grey;
+    max-width: 100%;
+}
