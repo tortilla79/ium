@@ -14,7 +14,7 @@ function adminCDoc() {
 	    div.appendChild(b1);
 	    b2.appendChild(text1);
 	    div.appendChild(b2);
-	   // b1.onclick = creacDoc;
+	    // b1.onclick = creacDoc;
 	    //	    b2.onclick = eliminacDoc;
 	    b1.addEventListener('click', function() {creacDoc("Aggiungi")});
 	    b2.addEventListener('click', function() {eliminacDoc("Rimuovi")});
@@ -31,6 +31,13 @@ function adminCDoc() {
 	let labelD = document.createElement("label");
 	let tfieldD = document.createElement("input");
 	let submit = document.createElement("input");
+	submit.setAttribute("name", labText);
+	tfieldC.id = "tfcorsi";
+	tfieldD.id = "tfdoc";
+
+	while (div.childElementCount > 2) {
+	    div.removeChild(div.lastChild);
+	}
 
 	if (div.childElementCount < 3) {
 	    labelC.textContent = labText + " al corso ";
@@ -65,17 +72,68 @@ function adminCDoc() {
 		bts[i].addEventListener("click", function() {hideBorder(i)});
 
 	}
+	tfreplace("#tfcorsi", "corsi");
+	tfreplace("#tfdoc", "doc");
+
+	submit.onclick = function(){submitAction(labText)};
     }
 
     function eliminacDoc(labText) {
 	creacDoc(labText);
     }
 
+    function tfreplace(replId, param) {
+	let select = document.createElement("select");
+	let torepl = document.querySelector(replId);
+
+	let xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function() {
+	    if (xhr.readyState == 4 && xhr.status == 200) {
+		let options = xhr.responseText.split(",");
+		for (let i=0; i<options.length; i++) 
+		    select.appendChild(document.createElement("option"));
+		for (let i=0; i<options.length; i++) {
+		    select.children[i].value = options[i];
+		    select.children[i].innerText = options[i];
+		}
+		div.replaceChild(select, torepl);
+		select.id = "tf" + param;
+	    }
+	}
+	xhr.open('GET', "ItemGetter?param=" + param, true);
+	xhr.send(null);
+    }
+
+    function submitAction(action) {
+	let valC, valD;
+	let selectC = document.querySelector("#tfcorsi");
+	let selectD = document.querySelector("#tfdoc");
+	valC = selectC.options[selectC.selectedIndex].value;
+	valD = selectD.options[selectD.selectedIndex].value;
+    
+	let field = valD.split(" ");
+	let xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function() {
+	    if (xhr.readyState == 4 && xhr.status == 200) {
+		if(!alert(xhr.response)){
+		    if (action == "Aggiungi")
+	    		creacDoc(action);
+		    else // rimuovi
+			eliminacDoc(action);
+
+		}
+	    }
+	}
+	let path = "DataStorage?param="+ action +"cdoc&data1="+ valC +"&data2="+ field[0] +"&data3="+ field[1];
+	xhr.open('GET', path, true);
+	xhr.send(null);
+	
+    }
+    
     let cdoc = document.querySelector('#cdoc');
 
     cdoc.addEventListener("click", docente);
     
-
 }
 
 adminCDoc();

@@ -84,6 +84,7 @@ button {
     background: white;
 }
 
+select,
 input,
 label {
     //    margin: auto;
