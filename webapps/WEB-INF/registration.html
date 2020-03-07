@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html lang="it">
+  <head>
+    <title>RipetizioniIUM - Registrazione</title>
+    <link rel="stylesheet" href="css/rip3.css"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Schoolbell">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="script/registration.js"></script>
+    <script src="script/login.js"></script>
+  </head>
+  <body>
+    <header>
+      SblockNotes
+    </header>
+    <nav>
+      <div>
+	<a href="home.html" class="menu">Home</a>
+      </div>
+      <div> <a href="contacts.html" class="menu">Contatti</a>
+      </div>
+      <div class="dropdown">
+	<a href="login.html" class="dropdown menu">Accedi</a>
+	<div class="dropdown-content">
+	  <label for="user">User</label><br>
+	  <input id="user" placeholder="gino il formaggino"><br>
+	  <label for="passwordlog">Password</label><br>
+	  <input id="passwordlog" type="password"><br>
+	  <input type="submit" value="Log-in"><br>
+	  <p></p>
+	  <a href="registration.html">Registrati</a>
+	</div>
+      </div>
+    </nav>
+    <section class="register" ng-app="registration" ng-controller="regCtrl">
+      <form>
+	<label for="username">Username : </label><input id="username" ng-model="username"><br>
+	<label for="email">E-mail : </label><input id="email" ng-model="email"><br>
+	<label for="password">Password : </label><input id="password" ng-model="password" type="password"><br>
+	<label for="passwordrip">Ripeti Password :</label><input id="passwordrip" ng-model="passwordrip"  type="password"><br>
+	<input type="submit" value="Registrati" ng-click="sendData()">
+      </form>
+      <p>{{requestans}}</p>
+    </section>
+    <footer>
+      <p>Se non studi peschi granchi</p>  
+    </footer>
+  </body>
+</html>

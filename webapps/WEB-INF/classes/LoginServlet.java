@@ -41,13 +41,16 @@ public class LoginServlet extends HttpServlet {
 	    String sqlStr = "SELECT * FROM user WHERE username = '" + logdata.username + "'";
 	    ResultSet rset = stmt.executeQuery(sqlStr);
 	    
-	    if (!rset.next()) { // Se l'username non esiste lo comunico al client
+	    if (!rset.next())  // Se l'username non esiste lo comunico al client
 		out.print("usr");
-	    } else {// registro il nuovo utente
-		if (rset.getString("password").equals(logdata.password))
-		    out.print("ok");
-		else
-		    out.print("usr");
+	    else if (!rset.getString("password").equals(logdata.password))
+		out.print("usr");
+	    else { //login
+		HttpSession session = request.getSession();
+		if(session.isNew())
+		    session.setAttribute("user", logdata.username);
+		
+		out.print("ok " + response.encodeUrl("user.jsp"));
 	    }
 	} catch (Exception ex) {
 	    out.print("dberror");

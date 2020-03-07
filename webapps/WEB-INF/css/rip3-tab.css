@@ -1,0 +1,52 @@
+main {
+    width: auto;
+    overflow: auto;
+    border: 2.5px solid black;
+    margin-bottom: 5vh;
+}
+
+table {
+    table-layout=fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 5px solid black;
+    font-size: inherit;
+}
+th {
+    font-size: 1.4vw;
+}
+th:nth-child(1) {
+    width: 2vw;
+}
+
+th, td {
+    letter-spacing: 2px;
+    padding: 20px;
+    border-right: 1px solid black;
+}
+
+td {
+    text-align: center;
+}
+
+/* button for corsi */
+td > * { 
+    width: 15vw;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+tbody tr:nth-child(odd){
+    background: rgba(1,75,150, 0.3);
+}
+
+tbody tr:nth-child(even){
+    background: rgba(150,75,1, 0.4);  
+}
+
+caption {
+    caption-side: bottom;
+    font-family: 'Schoolbell', cursive;
+    letter-spacing: 10px;
+}

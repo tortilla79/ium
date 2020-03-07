@@ -31,7 +31,7 @@ public class CalendarServlet extends HttpServlet {
 	    
 	    while (rset.next()) { // finche non ho letto tutte le materie scorro rset
 		tmp = rset.getString("name");
-		sb.append("<button>" + tmp + "</button><br/>");
+		sb.append("<button>"+ tmp +"</button><br/>");
 		
 	    }
 	    out.print(sb.toString());

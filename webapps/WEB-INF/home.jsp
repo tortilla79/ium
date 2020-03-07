@@ -15,25 +15,24 @@
     </header>
     <nav>
       <div>
-	<a href="home.html" class="menu">Home</a>
+	<a href=<%= response.encodeUrl("home.jsp") %> class="menu">Home</a>
       </div>
       <div>
 	<a href="contacts.html" class="menu">Contatti</a>
       </div>
       <div class="dropdown">
-	<a href="login.html" class="dropdown menu">Accedi</a>
+	<a href="login.html" class="dropdown menu"><%= session.getAttribute("user") %></a>
 	<div class="dropdown-content"
 	     ng-app="login" ng-controller="loginCtrl">
-	  <label for="user">User</label><br>
-	  <input ng-model="username" id="user" placeholder="gino il formaggino"><br>
-	  <label for="password">Password</label><br>
-	  <input ng-model="password" id="password" type="password"><br>
-	  <input type="submit" value="Log-in" ng-click="sendData()">
-	  <p ng-bind="requestans"></p>
-	  <a href="registration.html">Registrati</a>
+	  <fieldset>
+	    <a class="logged" href=<%= response.encodeUrl("home.jsp") %>>Prenota Lezione</a><br/>
+	    <a class="logged" href=<%= response.encodeUrl("user.jsp") %>>Storico Lezioni</a><br/>
+	  </fieldset>
+	  <a class="logged" href="invalidateSession.jsp">Log-out</a>
 	</div>
       </div>
     </nav>
+
     <section>
       <div class="search">
 	<label for="subject">Materia: </label>
@@ -90,3 +89,24 @@
     </footer>
   </body>
 </html>
+
+<!--	
+	  if(request.getSession(false) == null)
+	  out.print("<a href=\"login.html\" class=\"dropdown menu\">Accedi</a><div class=\"dropdown-content\"
+	     ng-app=\"login\" ng-controller=\"loginCtrl\"> <label for=\"user\">User</label><br>  <input ng-model=\"username\" id=\"user\" placeholder=\"gino il formaggino\"><br>  <label for=\"password\">Password</label><br>
+	  <input ng-model=\"password\" id=\"password\" type=\"password\"><br> <input type=\"submit\" value=\"Log-in\" ng-click=\"sendData()\"> <p ng-bind=\"requestans\"></p> <a href=\"registration.html\">Registrati</a></div>");
+
+	  else {
+	  out.print("<a href=\"login.html\" class=\"dropdown menu\">"+ session.getAttribute("user") +"</a>
+	<div class=\"dropdown-content\"
+	     ng-app=\"login\" ng-controller=\"loginCtrl\">
+	  <fieldset>
+	    <a class=\"logged\" href="+ response.encodeUrl("home.html") +">Prenota Lezione</a><br/>
+	    <a class=\"logged\" href="+ response.encodeUrl(\"user.jsp\") +">Storico Lezioni</a><br/>
+	  </fieldset>
+	  <a class=\"logged\" href=\"invalidateSession.jsp\">Log-out</a>
+	</div>");
+
+	  }
+	  
+	  -->

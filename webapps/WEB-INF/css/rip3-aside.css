@@ -1,0 +1,30 @@
+.search {
+    border: 5px solid black;
+    width: auto;
+    overflow: auto;
+    text-align: center;
+}
+
+.search > * {
+    margin: auto;
+
+
+}
+
+aside > div {
+    flex: 5 1 auto;
+}
+
+#radiob input{
+    margin-top: 40px;
+}
+#search {
+    width: 10vw;
+}
+#search input {
+    font-size: inherit;
+    width: 10vw;
+}
+input[type='submit']{
+    font-family: inherit;
+}
